@@ -1,22 +1,22 @@
 // @flow
 
-import BlotSpec from './specs/BlotSpec';
-import ImageSpec from './specs/ImageSpec';
-import IframeVideoSpec from './specs/IframeVideoSpec';
+import BlotSpec from './specs/BlotSpec'
+import ImageSpec from './specs/ImageSpec'
+import IframeVideoSpec from './specs/IframeVideoSpec'
 
 export type OverlayOptions = {
   // classname applied to the overlay element
   className: string,
   // style applied to overlay element, or null to prevent styles
   style: ?{},
-};
+}
 
 export type ResizeOptions = {
   // class name applied to the resize handles
   handleClassName: string,
   // style applied to resize handles, or null to prevent styles
   handleStyle: ?{},
-};
+}
 
 export type AlignOptions = {
   // the name of the attribute for an element that has its alignment changed
@@ -50,7 +50,7 @@ export type AlignOptions = {
     // style applied to the svgs in the buttons
     svgStyle: ?{},
   },
-};
+}
 
 export type Options = {
   // the BlotSpecs supported
@@ -58,13 +58,10 @@ export type Options = {
   overlay: OverlayOptions,
   align: AlignOptions,
   resize: ResizeOptions,
-};
+}
 
 const DefaultOptions: Options = {
-  specs: [
-    ImageSpec,
-    IframeVideoSpec,
-  ],
+  specs: [ImageSpec, IframeVideoSpec],
   overlay: {
     className: 'blot-formatter__overlay',
     style: {
@@ -98,6 +95,13 @@ const DefaultOptions: Options = {
           <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line>
           <line class="ql-stroke" x1="15" x2="5" y1="14" y2="14"></line>
           <line class="ql-stroke" x1="15" x2="9" y1="4" y2="4"></line>
+        </svg>
+      `,
+      full: `
+        <svg viewbox="0 0 18 18">
+          <line class="ql-stroke" x1="3" x2="15" y1="4" y2="4"></line>
+          <line class="ql-stroke" x1="3" x2="15" y1="9" y2="9"></line>
+          <line class="ql-stroke" x1="3" x2="15" y1="14" y2="14"></line>
         </svg>
       `,
     },
@@ -150,6 +154,6 @@ const DefaultOptions: Options = {
       opacity: '0.80',
     },
   },
-};
+}
 
-export default DefaultOptions;
+export default DefaultOptions
