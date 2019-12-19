@@ -22,6 +22,7 @@ export default class DefaultAligner implements Aligner {
         name: LEFT_ALIGN,
         icon: options.icons.left,
         apply: (el: HTMLElement) => {
+          el.setAttribute('style', '')
           this.setAlignment(el, LEFT_ALIGN)
           this.setStyle(el, 'inline', 'left', '0 1em 1em 0')
         },
@@ -30,6 +31,7 @@ export default class DefaultAligner implements Aligner {
         name: CENTER_ALIGN,
         icon: options.icons.center,
         apply: (el: HTMLElement) => {
+          el.setAttribute('style', '')
           this.setAlignment(el, CENTER_ALIGN)
           this.setStyle(el, 'block', null, 'auto')
         },
@@ -38,6 +40,7 @@ export default class DefaultAligner implements Aligner {
         name: RIGHT_ALIGN,
         icon: options.icons.right,
         apply: (el: HTMLElement) => {
+          el.setAttribute('style', '')
           this.setAlignment(el, RIGHT_ALIGN)
           this.setStyle(el, 'inline', 'right', '0 0 1em 1em')
         },
@@ -52,7 +55,7 @@ export default class DefaultAligner implements Aligner {
           // this.setStyle(el, 'block', null, 'auto')
           el.setAttribute('width', `100%`)
           el.setAttribute('height', `100%`)
-          el.setAttribute('style', 'position: absolute; left: 0; top: 0;', )
+          el.setAttribute('style', 'position: absolute; left: 0; top: 0;')
         },
       },
     }

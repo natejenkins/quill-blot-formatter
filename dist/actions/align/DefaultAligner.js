@@ -30,6 +30,7 @@ var DefaultAligner = function () {
       name: LEFT_ALIGN,
       icon: options.icons.left,
       apply: function apply(el) {
+        el.setAttribute('style', '');
         _this.setAlignment(el, LEFT_ALIGN);
         _this.setStyle(el, 'inline', 'left', '0 1em 1em 0');
       }
@@ -37,6 +38,7 @@ var DefaultAligner = function () {
       name: CENTER_ALIGN,
       icon: options.icons.center,
       apply: function apply(el) {
+        el.setAttribute('style', '');
         _this.setAlignment(el, CENTER_ALIGN);
         _this.setStyle(el, 'block', null, 'auto');
       }
@@ -44,6 +46,7 @@ var DefaultAligner = function () {
       name: RIGHT_ALIGN,
       icon: options.icons.right,
       apply: function apply(el) {
+        el.setAttribute('style', '');
         _this.setAlignment(el, RIGHT_ALIGN);
         _this.setStyle(el, 'inline', 'right', '0 0 1em 1em');
       }
