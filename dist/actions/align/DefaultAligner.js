@@ -51,11 +51,13 @@ var DefaultAligner = function () {
       name: FULL_ALIGN,
       icon: options.icons.full,
       apply: function apply(el) {
+        console.info("FULL ALIGN 3");
         _this.clear(el);
-        _this.setAlignment(el, FULL_ALIGN);
+        // this.setAlignment(el, FULL_ALIGN)
         // this.setStyle(el, 'block', null, 'auto')
         el.setAttribute('width', '100%');
         el.setAttribute('height', '100%');
+        el.setAttribute('style', 'position: absolute; left: 0; top: 0;');
       }
     }), _alignments);
   }
